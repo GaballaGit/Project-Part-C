@@ -1,0 +1,20 @@
+/public/index.php @bishoyfarag
+/public/movies.php @bishoyfarag
+/public/showtimes.php @bishoyfarag
+/public/seats.php @bishoyfarag
+
+/public/purchase.php @bebopkenny 
+/public/my_tickets.php @bebopkenny 
+/public/refund.php @bebopkenny 
+
+
+/includes/config.php @GaballaGit 
+/includes/db.php @GaballaGit 
+/includes/functions.php @GaballaGit 
+
+/includes/header.php @MedrianB 
+/includes/footer.php @MedrianB 
+
+/assets/ @bishoyfarag @GaballaGit @MedrianB @bebopkenny @KenTree @burhantaskin #Shared assets so call everyone 
+
+*.sql @GaballaGit @KenTree @burhantaskin #Everything related to the schema 
