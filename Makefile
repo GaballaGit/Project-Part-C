@@ -7,6 +7,11 @@ setup-codespace:
 	sudo apt update
 	sudo apt install mariadb-server mariadb-client
 	sudo service mariadb start
+	sudo apt install php
 	sudo apt install php-mysql
-	export PATH=/usr/bin:$PATH
-	php -m | grep mysql
+
+	sudo mysql -u root < sql/schema.sql
+	php -m | grep -i mysql || true
+	
+#	After, run the following
+# 	export PATH=/usr/bin:$PATH
