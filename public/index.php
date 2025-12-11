@@ -10,14 +10,16 @@ foreach ($tables as $table) {
     $stmt = $pdo->query("SELECT COUNT(*) AS c FROM {$table}");
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $stats[$table] = (int)($row['c'] ?? 0);
+    
 }
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Theatre Booking – Home</title>
-
+    <link rel="stylesheet" href="assets/styles.css">
     <style>
     /* General page style */
     body {
@@ -99,6 +101,10 @@ foreach ($tables as $table) {
 
 </head>
 <body>
+    <?php
+        require_once __DIR__ . '/../includes/header.php';
+        echo theatre_header();
+    ?>
 
 <h1>Theatre Booking | Part C</h1>
 
@@ -147,5 +153,9 @@ foreach ($tables as $table) {
     </tr>
 </table>
 
+    <?php
+        require_once __DIR__ . '/../includes/footer.php';
+        echo theatre_footer();
+    ?>
 </body>
 </html>

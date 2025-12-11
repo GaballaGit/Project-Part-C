@@ -74,6 +74,7 @@ foreach ($seats as $seat) {
 <head>
     <meta charset="UTF-8">
     <title>Select Seats - <?php echo esc($showtime['MovieName']); ?></title>
+    <link rel="stylesheet" href="assets/styles.css">
     <style>
     /* Temporary styling if we have to move it to a styles.css sheet */
     body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #fafafa; }
@@ -128,6 +129,10 @@ foreach ($seats as $seat) {
 </style>
 </head>
 <body>
+    <?php
+        require_once __DIR__ . '/../includes/header.php';
+        echo theatre_header();
+    ?>
     <a href="showtimes.php?movie_id=<?php echo esc($showtime['MovieID']); ?>" class="back-link">← Back to Showtimes</a>
 
     <!-- Showtime Info Header -->
@@ -273,5 +278,9 @@ foreach ($seats as $seat) {
         });
     </script>
 
+    <?php
+        require_once __DIR__ . '/../includes/footer.php';
+        echo theatre_footer();
+    ?>
 </body>
 </html>
