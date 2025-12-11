@@ -87,6 +87,7 @@ foreach ($showtimes as $show) {
 <head>
     <meta charset="UTF-8">
     <title>Showtimes</title>
+    <link rel="stylesheet" href="assets/styles.css">
     <style>
         /* Temporary styling, could put it into styles.css however it may conflict with other styling from index, unsure */
         body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #fafafa; }
@@ -123,6 +124,10 @@ foreach ($showtimes as $show) {
     </style>
 </head>
 <body>
+    <?php
+        require_once __DIR__ . '/../includes/header.php';
+        echo theatre_header();
+    ?>
     <a href="movies.php?id=<?php echo esc($movie_id); ?>" class="back-link"> ← Back to Movie Details</a>
 
     <!-- Movie Info Header -->
@@ -196,6 +201,9 @@ foreach ($showtimes as $show) {
         <?php endif; ?>
     </div>
 
-
+    <?php
+        require_once __DIR__ . '/../includes/footer.php';
+        echo theatre_footer();
+    ?>
 </body>
 </html>

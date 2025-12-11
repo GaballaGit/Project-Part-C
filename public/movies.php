@@ -28,6 +28,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>Browse Movies</title>
+    <link rel="stylesheet" href="assets/styles.css">
 
  <style>
     /* General page style */
@@ -110,7 +111,10 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </head>
 <body>
-
+    <?php
+        require_once __DIR__ . '/../includes/header.php';
+        echo theatre_header();
+    ?>
 <h1>Browse Movies</h1>
 
 <form method="get" action="movies.php">
@@ -153,5 +157,9 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <a href="index.php">Back to Home</a>
 
+    <?php
+        require_once __DIR__ . '/../includes/footer.php';
+        echo theatre_footer();
+    ?>
 </body>
 </html>
