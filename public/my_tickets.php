@@ -223,7 +223,12 @@ body { font-family: Arial, sans-serif; background: #f4f4f4; }
                                     </div>
                                     <div class="detail-row">
                                         <span class="label">Price:</span>
-                                        <span class="value">$<?php echo number_format($ticket['price'], 2); ?><?php if ($ticket['discounttype']): ?><span class="discount-badge"><?php echo esc($ticket['discounttype']); ?></span><?php endif; ?></span>
+                                        <span class="value">
+                                            $<?php echo number_format($ticket['price'], 2); ?>
+                                            <?php if ($ticket['discounttype'] && strtoupper($ticket['discounttype']) !== 'NONE'): ?>
+                                                <span class="discount-badge"><?php echo esc($ticket['discounttype']); ?></span>
+                                            <?php endif; ?>
+                                        </span>                                   
                                     </div>
                                 </div>
                                 
