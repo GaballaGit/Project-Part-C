@@ -34,6 +34,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     /* General page style */
     body {
         font-family: Arial, sans-serif;
+        padding: 50px;
     }
 
     button {
